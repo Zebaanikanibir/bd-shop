@@ -1,0 +1,20 @@
+.home{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+background-color: rgb(204, 229, 240);
+
+}
+.link{
+
+font-size: 20px;
+margin-left: 8px;
+}
+
+#login{
+    background-color:rgb(66, 241, 241);
+    
+}
+
+#navbar{
+    background-color:rgb(152, 212, 236);
+}

@@ -1,0 +1,9 @@
+#cardHeader{
+    background-color: blue;
+    color: aliceblue;
+    text-align: center;
+}
+
+#list, #list1{
+    background-color: rgb(186, 219, 231);
+}

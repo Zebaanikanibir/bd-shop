@@ -1,0 +1,22 @@
+.manage{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.thead{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+.name{
+    font-size: 20px;
+    line-height: 31px;
+}
+
+.name1{
+    font-size: 20px;
+    line-height: 38px;
+}
+.tHeader{
+    border-bottom: 1px solid black;
+}

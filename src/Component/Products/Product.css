@@ -1,0 +1,9 @@
+.click{
+    display: flex;
+    justify-content: space-around;
+}
+
+.box{
+    box-shadow: 1px 10px 30px skyblue;
+    border-radius: 10px;
+}

@@ -1,0 +1,39 @@
+.addProducts{
+
+    display: flex;
+    justify-content:space-around
+}
+.leftBar{
+
+height: 700px;
+width: 300px;
+background-color:skyblue;
+margin-top: 0;
+
+}
+
+#link, #brand{
+    text-align: center;
+    
+}
+.Fullform{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(195, 212, 245);
+}
+
+#formHeader{
+
+    text-align: center;
+}
+#submit{
+
+    background-color: blue;
+    color: aliceblue;
+}
+
+.rightBar{
+
+
+}
