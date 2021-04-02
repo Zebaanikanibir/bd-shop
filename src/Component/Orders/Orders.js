@@ -13,7 +13,9 @@ console.log(orders)
     }, [])
 
     return (
-        <Container className="order">
+        <div>
+            <h1 className="mt-5" id="brand">BD SHOP ❤</h1>
+            <Container className="order">
              {
 
                 orders.map(order => 
@@ -22,7 +24,8 @@ console.log(orders)
                 )
 
                 }
-        </Container>
+          </Container>
+        </div>
     );
 };
 
