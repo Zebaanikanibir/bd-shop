@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import './AddProducts.css';
 import { Link } from 'react-router-dom';
-import { Container, ListGroup, Form } from 'react-bootstrap';
+import { Container, Form } from 'react-bootstrap';
 const AddProducts = () => {
     const { register, handleSubmit, watch, errors } = useForm();
 
@@ -15,7 +15,7 @@ const AddProducts = () => {
         price:data.price,
         weight:data.weight
         }
-        const url = `http://localhost:5055/addProducts`
+        const url = `https://fast-island-71740.herokuapp.com/addProducts`
         console.log(eventData)
 
         fetch(url, {
@@ -26,7 +26,7 @@ const AddProducts = () => {
         },
         body: JSON.stringify(eventData)
         })
-        .then(res => console.log('server side response', res))
+        .then(res => alert('order added', res))
     };
 
 
@@ -64,7 +64,7 @@ const AddProducts = () => {
             <Form onSubmit={handleSubmit(onSubmit)} className="form-control" className="Fullform">
             <div>
             <Form.Label>Product Name</Form.Label>
-            <Form.Control className="form-control " name="name" defaultValue="Product Name" ref={register} />
+            <Form.Control className="form-control " name="name" ref={register} />
             <Form.Label>Product Weight</Form.Label>
              <Form.Control className="form-control " type="number" name="weight" ref={register}/>
             </div>

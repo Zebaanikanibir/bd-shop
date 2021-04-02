@@ -7,7 +7,7 @@ const Orders = () => {
 console.log(orders)
 
     useEffect(() => {
-    fetch('http://localhost:5055/orders')
+    fetch('https://fast-island-71740.herokuapp.com/orders')
     .then(res => res.json())
     .then(data => setOrders(data))
     }, [])

@@ -9,7 +9,7 @@ const CheckOut = () => {
     const [product, setProduct] = useState({})
     useEffect(() =>{
 
-  fetch(`http://localhost:5055/checkout/${id}`)
+  fetch(`https://fast-island-71740.herokuapp.com/checkout/${id}`)
   .then(res => res.json())
   .then(data => setProduct(data))
     }, [id])
@@ -23,7 +23,7 @@ const CheckOut = () => {
         const newOrder = {...loggedInUser, ...product, orderTime: new Date().toDateString('dd/MM/yyyy')}
 
         console.log(loggedInUser)
-        fetch('http://localhost:5055/addOrder', {
+        fetch('https://fast-island-71740.herokuapp.com/addOrder', {
         method:'POST',
         headers:{
         
@@ -37,7 +37,7 @@ const CheckOut = () => {
 
             if(data){
 
-                alert('successfully')
+                alert('order confirmed')
             }
         })
         }
@@ -47,7 +47,7 @@ const CheckOut = () => {
     return (
         <div>
            
-            <Container className="mt-5">
+            <Container className="tablec">
             <Table id="table">
             <thead>
                 <tr>
@@ -60,12 +60,12 @@ const CheckOut = () => {
                 <tr>
                 <td>{product.name}</td>
                 <td>1</td>
-                <td>${product.price}</td>
+                <td>${product.price}.00</td>
                 </tr>
                 <tr>
                 <td>Total</td>
                 <td>1</td>
-                <td>${product.price}</td>
+                <td>${product.price}.00</td>
                 </tr>
             </tbody>
             

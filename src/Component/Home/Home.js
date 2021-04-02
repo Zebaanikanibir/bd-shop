@@ -9,7 +9,7 @@ const Home = () => {
 
     
     useEffect(() => {
-    fetch('http://localhost:5055/products')
+    fetch('https://fast-island-71740.herokuapp.com/products')
     .then(res => res.json())
     .then(data => setProducts(data))
     }, [])

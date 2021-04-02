@@ -11,16 +11,15 @@ const Manage = () => {
 
         console.log(id)
 
-        fetch(`http://localhost:5055/delete/${id}`, {
+        fetch(`https://fast-island-71740.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
             
         })
         .then(res => res.json())
         .then(result => {
-        if (result) {
-           
+           if (result){
             alert('successfully deleted')
-        }
+           }
     
         })
     
@@ -33,7 +32,7 @@ const Manage = () => {
     
 
     useEffect(() => {
-    fetch('http://localhost:5055/products')
+    fetch('https://fast-island-71740.herokuapp.com/products')
     .then(res => res.json())
     .then(data => setProducts(data))
     }, [])
