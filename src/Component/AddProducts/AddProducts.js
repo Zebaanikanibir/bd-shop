@@ -71,7 +71,7 @@ const AddProducts = () => {
             <div>
             <Form.Label>Add Price</Form.Label>
             <Form.Control className="form-control " name="price" defaultValue="Price" type="number" ref={register} />
-             <Form.Label>Upload Photo</Form.Label>
+             <Form.Label>Add Photo</Form.Label>
             <Form.Control className="form-control "  name="exampleRequired" type="file" onChange={handleImageUpload} />
             </div>
             <Form.Control className="form-control" type="submit" id="submit"/>
