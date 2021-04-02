@@ -18,7 +18,7 @@ const Home = () => {
 
     return (
         <Container>
-            <Navbar id="navbar" expand="lg">
+            <Navbar id="navbar" expand="lg" sticky="top">
             <Navbar.Brand href="#home" id="brand">BD SHOP ❤</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
