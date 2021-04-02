@@ -59,7 +59,7 @@ const CheckOut = () => {
             </thead>
             <tbody>
                 <tr>
-                <td>{product.name}</td>
+                <td>{product.name}-{product.weight}ml</td>
                 <td>1</td>
                 <td>${product.price}.00</td>
                 </tr>
