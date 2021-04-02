@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom';
 import {Table, Button, Container} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
-import ManageProducts from '../ManageProducts/ManageProducts';
 import './Manage.css';
 const Manage = () => {
-    const deleteProduct = id => {
+    const deleteProduct = (id) => {
+
+
+
+        console.log(id)
 
         fetch(`http://localhost:5055/delete/${id}`, {
             method: 'DELETE'
@@ -14,14 +17,14 @@ const Manage = () => {
         })
         .then(res => res.json())
         .then(result => {
-        // if (result) {
-        //     event.target.parentNode.style.display = 'none';
-        // }
-        console.log('successfully')
+        if (result) {
+           
+            alert('successfully deleted')
+        }
     
         })
     
-            console.log(id)
+            
         }
 
 
@@ -37,11 +40,11 @@ const Manage = () => {
     return (
         <Container className="manage">
             <div className="leftBar">
-            <h1 className="mt-5" id="brand">BD SHOP</h1>
+            <h1 className="mt-5" id="brand">BD SHOP ❤</h1>
             <div id="link">
-            <p><Link  to="/manage">Manage Product</Link></p>
-            <p><Link  to="/addProducts">Add Product</Link></p>
-            <p><Link  to="/Edit">Edit Ptoduct</Link></p>
+            <p><Link  to="/manage">↪Manage Product</Link></p>
+            <p><Link  to="/addProducts">➕Add Product</Link></p>
+            <p><Link  to="/Edit">✂Edit Ptoduct</Link></p>
             </div>
             </div>
             <div className="rightBar">

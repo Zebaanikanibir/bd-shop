@@ -20,3 +20,11 @@
 .tHeader{
     border-bottom: 1px solid black;
 }
+
+@media only screen and (max-width: 600px) {
+    .manage {
+      
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }

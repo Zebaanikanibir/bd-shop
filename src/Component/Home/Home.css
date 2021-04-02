@@ -14,7 +14,21 @@ margin-left: 8px;
     background-color:rgb(66, 241, 241);
     
 }
+#brand{
+  font-size: 30px;
+  font-weight: 800;
+  color: crimson;
+}
 
 #navbar{
     background-color:rgb(152, 212, 236);
 }
+
+
+@media only screen and (max-width: 600px) {
+    .home {
+      
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }

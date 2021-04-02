@@ -15,42 +15,32 @@ const CheckOut = () => {
     }, [id])
       
 
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
-    // const [date, setDate] = useState(new Date())
-//   const calculateTotal = () =>{
+ const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+        const handleCheckOut = (product) =>{
 
-//     const getTotal = document.getElementById('total').innerText;
-//   const getTotalNumber = parseInt(getTotal);
-//   const total = getTotalNumber * .10;
-//   document.getElementById('total').innerText= total;
+        console.log('order sucessf', product)
 
-//   }
-//   calculateTotal()
- const handleCheckOut = (product) =>{
+        const newOrder = {...loggedInUser, ...product, orderTime: new Date().toDateString('dd/MM/yyyy')}
 
- console.log('order sucessf', product)
+        console.log(loggedInUser)
+        fetch('http://localhost:5055/addOrder', {
+        method:'POST',
+        headers:{
+        
+            'Content-Type':'application/json'
 
-const newOrder = {...loggedInUser, ...product, orderTime: new Date().toDateString('dd/MM/yyyy')}
+        },
+        body:JSON.stringify(newOrder)
+        })
+        .then(res => res.json())
+        .then(data => {
 
-console.log(loggedInUser)
-fetch('http://localhost:5055/addOrder', {
-method:'POST',
-headers:{
- 
-    'Content-Type':'application/json'
+            if(data){
 
-},
-body:JSON.stringify(newOrder)
-})
-.then(res => res.json())
-.then(data => {
-
-    if(data){
-
-        alert('successfully')
-    }
-})
- }
+                alert('successfully')
+            }
+        })
+        }
 
 
 
@@ -73,14 +63,9 @@ body:JSON.stringify(newOrder)
                 <td>${product.price}</td>
                 </tr>
                 <tr>
-                <td>Tax</td>
-                <td>10%</td>
-                <td>$.10</td>
-                </tr>
-                <tr>
                 <td>Total</td>
-                <td>10*{product.price}$</td>
-                <td>$<span id="total">00</span></td>
+                <td>1</td>
+                <td>${product.price}</td>
                 </tr>
             </tbody>
             

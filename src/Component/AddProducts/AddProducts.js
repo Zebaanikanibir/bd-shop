@@ -52,11 +52,11 @@ const AddProducts = () => {
     return (
         <Container className="addProducts">
             <div className="leftBar">
-            <h1 className="mt-5" id="brand">BD SHOP</h1>
+            <h1 className="mt-5" id="brand">BD SHOP ❤</h1>
             <div id="link">
-            <p><Link  to="/manage">Manage Product</Link></p>
-            <p><Link  to="/addProducts">Add Product</Link></p>
-            <p><Link  to="/Edit">Edit Ptoduct</Link></p>
+            <p><Link  to="/manage">↪Manage Product</Link></p>
+            <p><Link  to="/addProducts">➕Add Product</Link></p>
+            <p><Link  to="/Edit">✂Edit Ptoduct</Link></p>
             </div>
             </div>
             <div className="rightBar mt-5">
@@ -64,7 +64,7 @@ const AddProducts = () => {
             <Form onSubmit={handleSubmit(onSubmit)} className="form-control" className="Fullform">
             <div>
             <Form.Label>Product Name</Form.Label>
-            <Form.Control className="form-control " name="name" defaultValue="Photo" ref={register} />
+            <Form.Control className="form-control " name="name" defaultValue="Product Name" ref={register} />
             <Form.Label>Product Weight</Form.Label>
              <Form.Control className="form-control " type="number" name="weight" ref={register}/>
             </div>

@@ -29,12 +29,6 @@ const Products = (props) => {
             </Card.Body>
             </Card>
             </div>
-
-
-             {/* <div className="col-md-3">
-            <img style={{height: '300px'}} src={imageURL} alt=""/>
-            <h3>{name}-{weight}ml</h3>
-            <h2>${price}</h2> */}
             
         </Container>
     );
