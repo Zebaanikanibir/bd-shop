@@ -7,7 +7,12 @@ import { useHistory, useLocation } from 'react-router-dom';
 import {Card, Button, Container} from 'react-bootstrap';
 import './Login.css';
 import image from '../../Images/google.png';
-firebase.initializeApp(firebaseConfig)
+
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}else {
+  firebase.app(); 
+}
 
 const Login = () => {
     const [user, setUser] = useState({})
@@ -48,7 +53,8 @@ const Login = () => {
     const location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
     return (
-        
+        <div>
+          <h1 className="mt-5" id="brand">BD SHOP ❤</h1>
             <Container className="mt-5 App login">
             <Card>
               <Card.Body className="cardBody">
@@ -57,6 +63,8 @@ const Login = () => {
               </Card.Body>
             </Card>
             </Container>
+        </div>
+           
     );
 };
 

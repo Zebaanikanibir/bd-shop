@@ -46,7 +46,8 @@ const CheckOut = () => {
 
     return (
         <div>
-           
+           <h1 className="mt-5" id="brand">BD SHOP ❤</h1>
+           <h2 id="check">Checkout</h2>
             <Container className="tablec">
             <Table id="table">
             <thead>
