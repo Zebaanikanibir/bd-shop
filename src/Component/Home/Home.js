@@ -9,11 +9,14 @@ const Home = () => {
 
     
     useEffect(() => {
+        
     fetch('https://fast-island-71740.herokuapp.com/products')
     .then(res => res.json())
-    .then(data => setProducts(data))
+    .then(data => setProducts(data)
+    
+    
+    )
     }, [])
-
     
 
     return (
@@ -34,7 +37,13 @@ const Home = () => {
             </Nav>
             </Navbar.Collapse>
            </Navbar>
-          
+           {
+               products.length === 0 && (
+                <div id="loading" className="App mt-5">
+                <Spinner animation="border" variant="primary" />
+                </div>
+               )
+           }
              <div className="home mt-5">
                 {
 

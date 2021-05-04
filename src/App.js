@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, Suspense } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Home from './Component/Home/Home';
